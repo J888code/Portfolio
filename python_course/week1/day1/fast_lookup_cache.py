@@ -12,7 +12,6 @@ def create_lookup_cache(names: list) -> dict:
     """
     d = {name: True for name in names}
     return d
-create_lookup_cache(["alice", "bob", "carol"])
 # Test
 cache = create_lookup_cache(["alice", "bob", "carol"])
 assert "alice" in cache  # O(1) lookup!

@@ -1,0 +1,57 @@
+body {
+  /* background color, font family, margin, padding */
+  background-color: #000000;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin: 100px;
+  padding: 12px;
+}
+
+h1 {
+  /* font size, color, margin */
+  font-size: 20px;
+  color: rgb(0, 255, 64);
+  margin: auto;
+}
+
+#messages {
+  /* border, height, background, overflow */
+  border: 5px solid rgb(21, 20, 20);
+  height: 450px;
+  overflow: scroll;
+}
+
+#messageInput {
+  /* width, padding, border, font size */
+  width: auto;
+  padding: 5px;
+  border: 2px solid #111;
+  font-size: 15px;
+}
+
+#sendButton {
+  /* background color, color, padding, cursor */
+  background-color: rgb(68, 246, 68);
+  color: rgb(2, 50, 10);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.user-message {
+  text-align: right;
+  background-color: rgb(3, 131, 56);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  color: rgb(4, 71, 24);
+  width: fit-content;
+  margin-left: auto;
+}
+
+.bot-message {
+  text-align: left;
+  background-color: rgb(90, 89, 89);  /* grey */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 2px;
+  color: white;
+  width: fit-content;
+}
