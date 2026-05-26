@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-hi
-=======
-# python_course
-I learn python.
->>>>>>> 2048a1aaf3f0f3d69a012390d8969717ccee8d44
-=======
 # Portfolio
 
 Welcome to my coding portfolio! This repository showcases my learning journey and projects as I progress towards a career in software engineering.
@@ -101,9 +93,3 @@ I’m planning to build:
 ## Contact & Connect
 
 - **GitHub**: [J888code](https://github.com/J888code)
-- **
-
------
-
-:)
->>>>>>> d0f304f28edd0b62fc1e13f02891b6a86658d076
