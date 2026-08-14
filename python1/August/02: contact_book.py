@@ -73,6 +73,7 @@ def contact_book():
             print("No contact found with that name.")
 
     def delete_contact():
+        nonlocal contacts  # ← Add this line
         name_to_delete = input('Enter name to delete: ')
         old_length = len(contacts)
         contacts = [c for c in contacts if not (name_to_delete.lower() in c['name'].lower())]
@@ -82,7 +83,7 @@ def contact_book():
             print('Contact deleted')
         else:
             print('No contact found with that name.')
-
+            
     while True:
         print('1. Add Contact\n2. Search Contact\n3. Display All Contacts\n4. Edit Contact\n5. Delete Contact\n6. Quit')
         try:
