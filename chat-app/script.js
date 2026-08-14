@@ -7,7 +7,7 @@ const botResponses = [
   { keywords: ["how are you", "how's it going", "wsg"], response: "I'm doing great, thanks for asking!" },
 ];
 const botCommands = {
-  "/help": "Available commands: /help, /dreamrift, /codingtips, /leetcode, /about, /projects, /stack, /goals, /achiements",
+  "/help": "Available commands: /help, /dreamrift, /codingtips, /leetcode, /about, /projects, /stack, /goals, /achievements",
   "/dreamrift": "Dreamrift is my Roblox game project.",
   "/codingtips": "Here are my top coding tips: 1. Plan first",
   "/leetcode": "I've solved 16 leetcode problems",
@@ -15,9 +15,11 @@ const botCommands = {
   "/projects": "Dreamrift, web scrapper, password checker, cryptography",
   "/stack": "HTML, CSS, JavaScript, Python, Luau",
   "/goals": "Break into big tech.",
-  "/achievements": "PCTC - Finals: Merit, 16 leetcode solved"
+  "/achievements": "PCTC - Finals: Merit, 16 leetcode solved",
+  "/terminal": "Loading terminal..."
 };
 
+let isTerminalMode = false;
 let messagesData = []
 
 function getTimestamp() {
@@ -46,6 +48,9 @@ function sendMessage() {
             messagesContainer.appendChild(botDiv);
         }
     }
+    if (message === "/terminal") {
+        toggleTerminalMode();
+    }
     localStorage.setItem("chatMessages", JSON.stringify(messagesData));
     inputElement.value = "";
 }
@@ -62,6 +67,11 @@ function loadMessages() {
         messagesContainer.appendChild(div);
     }
   }
+}
+
+function toggleTerminalMode() {
+  isTerminalMode = !isTerminalMode;
+  messagesContainer.className = isTerminalMode ? "terminal-mode" : "";
 }
 
 sendButton.addEventListener("click", sendMessage);

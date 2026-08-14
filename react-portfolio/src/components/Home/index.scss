@@ -1,0 +1,139 @@
+.home-page {
+  overflow: hidden;
+
+  .text-zone {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    position: relative;
+    color: #fff;
+    font-size: 56px;
+    line-height: 53px;
+    margin: 0;
+    font-family: 'Century Gothic', 'Verdana', sans-serif;
+    font-weight: 700;
+
+    &:before {
+      content: '<h1>';
+      font-family: 'La Belle Aurore', cursive;
+      color: #000;
+      font-size: 18px;
+      position: absolute;
+      margin-top: -40px;
+      left: -15px;
+      opacity: 0.6;
+    }
+
+    &:after {
+      content: '<h1/>';
+      font-family: 'La Belle Aurore', cursive;
+      color: #000;
+      font-size: 18px;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 20px;
+      animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
+    }
+
+    img {
+      margin-left: 20px;
+      opacity: 0;
+      width: 32px;
+      height: auto;
+      animation: rotateIn 1s linear both;
+      animation-delay: 1.4s;
+    }
+  }
+
+  h2 {
+    color: #8d8d8d;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .flat-button {
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #000;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+      background: #000;
+      color: #8b0000;
+    }
+  }
+
+  .clear-button {
+    display: block;
+    margin: 12px auto 0;
+    color: #8d8d8d;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    animation: fadeIn 1s 1.9s backwards;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tags,
+  .home-page h1:before,
+  .home-page h1:after {
+    display: none;
+  }
+
+  .home-page .text-zone {
+    position: initial;
+    width: 100%;
+    transform: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .home-page .button-row {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto 0 auto;
+  }
+
+  .home-page .flat-button {
+    display: block;
+    width: 124px;
+  }
+}
