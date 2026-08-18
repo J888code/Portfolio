@@ -68,8 +68,8 @@ def main():
         if choice == 3:
             try:
                 acc_no = int(input('Select account number: '))
-                if 0 <= acc_no < len(accounts):
-                    account = accounts[acc_no]
+                if 1 <= acc_no < len(accounts):
+                    account = accounts[acc_no -1]
                     amount = int(input('Withdraw amount: '))
                     if amount <= account.balance:
                         account.withdraw(amount)
@@ -84,12 +84,12 @@ def main():
                 acc_type = 'Savings' if isinstance(account, SavingAccount) else 'Checking'
                 print(f"{index}. {account.name} - {acc_type} Account - Balance: ${account.get_balance()}")
                 if isinstance(account, SavingAccount):
-                    print(f"Interest Rate: {account.interest_rate}%)")
+                    print(f"(Interest Rate: {account.interest_rate}%)")
         if choice == 5:
             try:
                 acc_no = int(input('Select account number: '))
-                if 0 <= acc_no < len(accounts):
-                    account = accounts[acc_no]
+                if 1 <= acc_no < len(accounts):
+                    account = accounts[acc_no -1]
                     if isinstance(account, SavingAccount):
                         account.apply_interest()
                         print(f'Interest applied! New balance: ${account.get_balance()}')
