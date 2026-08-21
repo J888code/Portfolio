@@ -57,27 +57,26 @@ def main():
             if guess == password:
                 item_name = input('Item: ').lower()
                 found = False
-                try:
-                    amount = int(input('Quantity: '))
-                    item.quantity += amount
-                except ValueError:
-                    print('Invalid input')
-                break
                 for item in vending_machine.items:
                     if item.name.lower() == item_name:
                         found = True
-                        item.quantity += 1
+                        try:
+                            amount = int(input('Quantity to add: '))
+                            item.quantity += amount
+                            print('Item restocked!')
+                        except ValueError:
+                            print('Invalid input')
                         break
+                    
                 if not found:
                     try:
                         priced = float(input('Price: '))
                         quant = int(input('Quantity: '))
+                        new = Item(item_name, priced, quant)
+                        vending_machine.items.append(new)
+                        print('New item added!')
                     except ValueError:
                         print('Error')
-                    new = Item(item_name, priced, quant)
-                    vending_machine.items.append(new)
-                else:
-                    print('Item restocked!')
             else:
-                print('Incorrect')
+                print('Incorrect password')
 main()
