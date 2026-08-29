@@ -12,6 +12,8 @@ class Employee(ABC):
 class Salaried(Employee):
     def __init__(self, name, employee_id, base_salary):
         super().__init__(name, employee_id, base_salary)
+    def calculate_pay(self):
+        return self.base_salary
 class Hourly(Employee):
     def __init__(self, name ,employee_id, hourly_rate, hours_worked):
         self.name = name
