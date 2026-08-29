@@ -9,7 +9,9 @@ class User:
     def remove_friend(self, user):
         self.friends.remove(user)
     def post(self, content):
-        pass
+        from datetime import datetime
+        post = Post(self.username, content, datetime.now())
+        self.posts.append(post)
     def view_posts(self):
         pass
     def view_feed(self):
@@ -32,7 +34,10 @@ class SocialNetwork:
         user = User(username, email)
         self.users.append(user)
     def find_user(self, username):
-        pass
+        for user in self.users:
+            if user.username == username:
+                return user
+        return None
     def get_all_users(self):
         pass
 
@@ -64,8 +69,31 @@ def main():
         if choice == 2:
             you = input('Your username: ')
             for username in network.users:
-                if you == username:
+                if you == username.username:
                     friend = input('Friend username: ')
-                    username.friends.append(friend)
+                    for username in network.users:
+                        if friend == username.username:
+                            friend_acc = username
+                            username.friends.append(friend_acc)
                     print(f'{friend} added as friend!')
+        if choice == 3:
+            name = input('Username: ')
+            for username in network.users:
+                if name == username.username:
+                    post = input('Post content: ')
+                    username.post(post)
+                    print('Posted!')
+        if choice == 4:
+            name = input('Username: ')
+            if network.find_user(name):
+                user = network.find_user(name)
+                print(f"=== {name}'s Feed ===")
+                for post in user.posts:
+                    print(f"{post.author}: {post.content} ({post.likes} likes)")
+        if choice == 5:
+            name = input('Username: ')
+            if network.find_user(name):
+                user = network.find_user(name)
+                print(name)
+                print(f'Email: {user.email}')
 main()
