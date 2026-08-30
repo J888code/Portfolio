@@ -94,6 +94,5 @@ def main():
             name = input('Username: ')
             if network.find_user(name):
                 user = network.find_user(name)
-                print(name)
-                print(f'Email: {user.email}')
+                print(f"{name} - Email: {user.email}")
 main()
