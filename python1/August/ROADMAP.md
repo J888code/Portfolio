@@ -9,31 +9,30 @@
 ## PHASE 1: PCTC Prep (Aug 2026 - March 2027)
 **Current phase. Year 9.**
 
-### August - September 2026: Finish FCC Python
-**Focus:** Complete all 531 FCC Python steps before Y9 school ramp-up
-FCC|Maths
-- [ ] **Current:** 267/531 steps done (50%) ✓
-- [ ] **Target:** Finish ALL 531 steps by mid-September
-  - ~264 steps remaining
-  - ~66 steps/week (your current pace)
-  - Aim for early September finish if possible
+### August 2026: Finish 15/30 projects
+**Focus:** Complete 15 projects before Y9
+Maths|30projects
+- [ ] **Current:** 529/531 steps done ✓
+- [ ] **Target:** 15/30 projects
+  - ~2 steps remaining
+  - ~1 project remaining
 - [ ] GCSE Maths: 30-60 min/week on class topics
 - **Time:** 5-6 hours/week coding
 - **Vibe:** Push to the finish line, then celebrate
-- **Checkpoint (mid-September):** FCC Python 100% done ✓
+- **Checkpoint:** 15/30 projects✓
 
 ### September - November 2026: Python Sponge Collections 1-2
-**Focus:** Master GCSE + early A Level Python (foundation for PCTC)
-pythonsponge|python mastery|maths
+**Focus:** FCC + early A Level Python (foundation for PCTC)
+pythonsponge|30projects|maths|fcc
 - [ ] **Status:** Collection 1 (GCSE) already complete ✓
-- [ ] Complete Collection 2 (A Level fundamentals)
+- [ ] Complete Collection 2, 100% fcc
   - ~3-4 weeks comfortable pace
   - Finish by end of November
 - [ ] Study Python concepts deeply (GCSE + early A Level: loops, functions, OOP intro, data structures)
 - [ ] GCSE Maths: still light (30-60 min/week)
 - **Time:** 5-6 hours/week coding
 - **Vibe:** Building solid Python foundation + A Level taste
-- **Checkpoint (end November):** Collections 1-2 done. Ready for intensive PCTC prep.
+- **Checkpoint (end November):** Collections 1-2 done. Ready for intensive PCTC prep + fcc 100% done
 
 ### November - March 2027: PCTC Past Papers Grind (4-5 months)
 **Focus:** Review mode → Timed mode. Practice real papers under competition timing.**
